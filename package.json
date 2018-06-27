@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Simple koa server + js client seed",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/diversivo/simple-koa-seed.git"
+  },
   "scripts": {
     "start": "node ./server/index.js",
     "build": "webpack-serve --config webpack.config.babel.js",
