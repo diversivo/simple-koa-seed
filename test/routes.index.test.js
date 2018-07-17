@@ -9,15 +9,13 @@ const server = require('../server/index');
 
 describe('routes:index',()=>{
     describe('GET /check',()=>{
-        it('Sould return json',(done)=>{
+        it('Should return html',(done)=>{
             chai.request(server)
-                .get('/check')
+                .get('/')
                 .end((err,res)=>{
                     should.not.exist(err);
                     res.status.should.eql(200);
-                    res.type.should.eql('application/json');
-                    res.body.status.should.equal('success');
-                    res.body.message.should.eql('hello, world!');
+                    res.type.should.eql('text/html');
                     done();
                 });
         });
