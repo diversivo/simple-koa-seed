@@ -5,13 +5,13 @@ const should = chai.should();
 const chaiHttp = require('chai-http');
 
 chai.use(chaiHttp);
-const server = require('../src/server/index');
+const server = require('../server/index');
 
 describe('routes:index',()=>{
-    describe('GET /',()=>{
+    describe('GET /check',()=>{
         it('Sould return json',(done)=>{
             chai.request(server)
-                .get('/')
+                .get('/check')
                 .end((err,res)=>{
                     should.not.exist(err);
                     res.status.should.eql(200);

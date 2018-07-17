@@ -1,23 +1,23 @@
 const path = require('path');
 
 const webConfig = {
-  mode: 'development',
+  mode: 'production',
   target: 'web',
   context: path.resolve('.'),
-  watch: true,
+  // watch: true,
   entry: {
     index: './client/src/index.js'
   },
   output: {
-    path: path.resolve(__dirname, '/client/dist'),
-    publicPath: "/client/public",
+    path: path.resolve(__dirname, 'client/dist'),
+    publicPath: "client/public",
     filename: 'bundle.js'
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        include: path.resolve(__dirname, '/client/index.js'),
+        include: path.resolve(__dirname, 'client/index.js'),
         exclude: /node_modules/,
         loader: 'babel-loader',
         options: {

@@ -10,6 +10,4 @@ const div =  document.createElement("DIV");
 div.appendChild(div.ownerDocument.importNode(logo.documentElement, true))
 box.appendChild(div);
 box.classList.add('box');
-screen.appendChild(box);
-screen.classList.add('screen');
 document.body.appendChild(box);
